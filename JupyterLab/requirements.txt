@@ -1,0 +1,8 @@
+numpy
+control
+multiprocess
+tqdm
+mpmath
+
+jupyterlab_widgets
+ipywidgets
