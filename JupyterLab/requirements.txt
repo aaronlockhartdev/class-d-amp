@@ -5,5 +5,10 @@ multiprocess
 tqdm
 mpmath
 
+cupy-cuda12x
+ltspice
+cuda-python
+
 jupyterlab_widgets
 ipywidgets
+ipyfilechooser

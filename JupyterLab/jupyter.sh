@@ -1,5 +1,8 @@
 #!/bin/sh
 
+export CUDA_PATH=/usr/local/cuda-12.3/
+export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64
+
 # Activate virtualenv
 source .venv/bin/activate
 
