@@ -1,13 +1,8 @@
-numpy
-control
-dill
-multiprocess
-tqdm
-mpmath
 
-cupy-cuda12x
 ltspice
+numpy
 cuda-python
+cupy-cuda12x
 
 jupyterlab_widgets
 ipywidgets

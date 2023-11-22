@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 export CUDA_PATH=/usr/local/cuda-12.3/
 export LD_LIBRARY_PATH=/usr/local/cuda-12.3/lib64
