@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.css": "tailwindcss",
+        "xstring": "cpp",
+        "map": "cpp",
+        "iosfwd": "cpp"
+    }
+}

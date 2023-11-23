@@ -1,5 +1,39 @@
-# Created by https://www.toptal.com/developers/gitignore/api/venv,kicad,python,ltspice,jupyternotebooks,macos,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=venv,kicad,python,ltspice,jupyternotebooks,macos,windows
+# Created by https://www.toptal.com/developers/gitignore/api/venv,kicad,macos,python,ltspice,windows,jupyternotebooks,c++,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=venv,kicad,macos,python,ltspice,windows,jupyternotebooks,c++,visualstudiocode
+
+### C++ ###
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
 
 ### JupyterNotebooks ###
 # gitignore template for Jupyter Notebooks
@@ -108,7 +142,6 @@ __pycache__/
 *$py.class
 
 # C extensions
-*.so
 
 # Distribution / packaging
 .Python
@@ -281,6 +314,25 @@ pyrightconfig.json
 pyvenv.cfg
 pip-selfcheck.json
 
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -307,4 +359,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/venv,kicad,python,ltspice,jupyternotebooks,macos,windows
+# End of https://www.toptal.com/developers/gitignore/api/venv,kicad,macos,python,ltspice,windows,jupyternotebooks,c++,visualstudiocode

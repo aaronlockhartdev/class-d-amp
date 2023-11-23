@@ -1,9 +1,0 @@
-
-ltspice
-numpy
-cuda-python
-cupy-cuda12x
-
-jupyterlab_widgets
-ipywidgets
-ipyfilechooser

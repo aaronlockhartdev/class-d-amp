@@ -101,7 +101,14 @@ __global__ void calculateResponse(
     resArr[grid.thread_rank()] = res;
 }
 
-__global__ void freeMemory(void *ptr) { free(ptr); }
+__global__ void freeMemory(void *ptr)
+{
+    if (this_grid().thread_rank() != 0)
+        return;
+
+    free(ptr);
+}
+
 /*----------------------
 |  Main kernel
 -----------------------*/
@@ -110,6 +117,8 @@ extern "C" __global__ void kernel(const double *hArr, const double *fArr, size_t
                                   const double texOffset, const double texScale, const cudaTextureObject_t tex,
                                   complex<double> *responseArray)
 {
+    if (this_grid().thread_rank() != 0)
+        return;
 
     complex<double> *workingMem = (complex<double> *)malloc(sizeof(complex<double>) * hSize * fSize * nSize);
 
