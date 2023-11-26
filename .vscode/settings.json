@@ -3,6 +3,12 @@
         "*.css": "tailwindcss",
         "xstring": "cpp",
         "map": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "fstream": "cpp",
+        "string": "cpp",
+        "istream": "cpp",
+        "regex": "cpp",
+        "xiosbase": "cpp",
+        "vector": "cpp"
     }
 }
