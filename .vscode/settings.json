@@ -9,6 +9,7 @@
         "istream": "cpp",
         "regex": "cpp",
         "xiosbase": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "cstddef": "cpp"
     }
 }
