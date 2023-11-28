@@ -10,6 +10,8 @@
         "regex": "cpp",
         "xiosbase": "cpp",
         "vector": "cpp",
-        "cstddef": "cpp"
+        "cstddef": "cpp",
+        "chrono": "cpp",
+        "utility": "cpp"
     }
 }
