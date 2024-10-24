@@ -1,9 +1,0 @@
-[SAPEC]
-Out=v1;
-NumOut=1
-Comp=Cf;Ci;Cl;Cmfb;Lf;Rfb;Ri;Rl;Rmfb;Rmfb2;Rmfb3;$;$;
-Val=1;1;1;1;1;1;1;1;1;1;1;-1;1;
-GrNum=3;
-NtNum=8;
-GrDen=5
-NtDen=58

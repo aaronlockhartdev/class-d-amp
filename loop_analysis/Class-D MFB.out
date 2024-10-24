@@ -1,14 +1,14 @@
 v1:
 
-+ (  - Ri Rmfb3 )
-+ (  - Cl Ri Rl Rmfb3 + Cl Rfb Ri Rmfb ) j w
-- (  Cmfb Cl Ri Rmfb Rmfb2 Rmfb3 + Cmfb Cl Rfb Rmfb Rmfb2 Rmfb3 + Cmfb Cl Rfb Ri Rmfb Rmfb3 + Cmfb Cl Rfb Ri Rmfb Rmfb2 ) w^2
-- (  Cmfb Cl Ci Rfb Ri Rmfb Rmfb2 Rmfb3 ) j w^3
++ (  Rg Ri Rload Rmfb3 )
++ (  Cl Rg Ri Rl Rload Rmfb3 + Cl Rfb Ri Rload Rmfb Rmfb1 ) s
++ (  Cmfb2 Cl Rfb Ri Rload Rmfb Rmfb2 Rmfb3 + Cmfb2 Cl Rfb Ri Rload Rmfb Rmfb1 Rmfb3 + Cmfb2 Cl Rfb Ri Rload Rmfb Rmfb1 Rmfb2 ) s^2
++ (  Cmfb2 Cmfb1 Cl Rfb Ri Rload Rmfb Rmfb1 Rmfb2 Rmfb3 ) s^3
 ------------------------------------------------------------------------------
-+ (  Rfb Ri )
-+ (  Cl Rfb Ri Rmfb + Cl Rfb Ri Rl + Cmfb Ri Rmfb2 Rmfb3 + Cmfb Rfb Rmfb2 Rmfb3 + Cmfb Rfb Ri Rmfb3 + Cmfb Rfb Ri Rmfb2 + Lf Ri ) j w
-- (  Cf Lf Rfb Ri + Cmfb Ci Rfb Ri Rmfb2 Rmfb3 + Cmfb Cl Ri Rmfb Rmfb2 Rmfb3 + Cmfb Cl Ri Rl Rmfb2 Rmfb3 + Cmfb Cl Rfb Rmfb Rmfb2 Rmfb3 + Cmfb Cl Rfb Rl Rmfb2 Rmfb3 + Cmfb Cl Rfb Ri Rmfb Rmfb3 + Cmfb Cl Rfb Ri Rmfb Rmfb2 + Cmfb Cl Rfb Ri Rl Rmfb3 + Cmfb Cl Rfb Ri Rl Rmfb2 + Cl Lf Ri Rmfb3 + Cl Lf Ri Rmfb + Cl Lf Ri Rl + Cl Lf Rfb Ri + Cmfb Lf Rmfb2 Rmfb3 + Cmfb Lf Ri Rmfb3 + Cmfb Lf Ri Rmfb2 ) w^2
-- (  Cl Cf Lf Rfb Ri Rmfb + Cl Cf Lf Rfb Ri Rl + Cmfb Cf Lf Ri Rmfb2 Rmfb3 + Cmfb Cf Lf Rfb Rmfb2 Rmfb3 + Cmfb Cf Lf Rfb Ri Rmfb3 + Cmfb Cf Lf Rfb Ri Rmfb2 + Cmfb Cl Ci Rfb Ri Rmfb Rmfb2 Rmfb3 + Cmfb Cl Ci Rfb Ri Rl Rmfb2 Rmfb3 + Cmfb Ci Lf Ri Rmfb2 Rmfb3 + Cmfb Cl Lf Rmfb Rmfb2 Rmfb3 + Cmfb Cl Lf Rl Rmfb2 Rmfb3 + Cmfb Cl Lf Ri Rmfb2 Rmfb3 + Cmfb Cl Lf Ri Rmfb Rmfb3 + Cmfb Cl Lf Ri Rmfb Rmfb2 + Cmfb Cl Lf Ri Rl Rmfb3 + Cmfb Cl Lf Ri Rl Rmfb2 + Cmfb Cl Lf Rfb Rmfb2 Rmfb3 + Cmfb Cl Lf Rfb Ri Rmfb3 + Cmfb Cl Lf Rfb Ri Rmfb2 ) j w^3
-+ (  Cmfb Ci Cf Lf Rfb Ri Rmfb2 Rmfb3 + Cmfb Cl Cf Lf Ri Rmfb Rmfb2 Rmfb3 + Cmfb Cl Cf Lf Ri Rl Rmfb2 Rmfb3 + Cmfb Cl Cf Lf Rfb Rmfb Rmfb2 Rmfb3 + Cmfb Cl Cf Lf Rfb Rl Rmfb2 Rmfb3 + Cmfb Cl Cf Lf Rfb Ri Rmfb Rmfb3 + Cmfb Cl Cf Lf Rfb Ri Rmfb Rmfb2 + Cmfb Cl Cf Lf Rfb Ri Rl Rmfb3 + Cmfb Cl Cf Lf Rfb Ri Rl Rmfb2 + Cmfb Cl Ci Lf Ri Rmfb Rmfb2 Rmfb3 + Cmfb Cl Ci Lf Ri Rl Rmfb2 Rmfb3 + Cmfb Cl Ci Lf Rfb Ri Rmfb2 Rmfb3 ) w^4
-+ (  Cmfb Cl Ci Cf Lf Rfb Ri Rmfb Rmfb2 Rmfb3 + Cmfb Cl Ci Cf Lf Rfb Ri Rl Rmfb2 Rmfb3 ) j w^5
++ (  Rfb Ri Rload Rmfb1 )
++ (  Cl Rfb Ri Rload Rmfb Rmfb1 + Cl Rfb Ri Rl Rload Rmfb1 + Cmfb2 Rfb Ri Rload Rmfb2 Rmfb3 + Cmfb2 Rfb Ri Rload Rmfb1 Rmfb3 + Cmfb2 Rfb Ri Rload Rmfb1 Rmfb2 + Lf Ri Rload Rmfb1 + Lf Rfb Ri Rmfb1 ) s
++ (  Cf Lf Rfb Ri Rload Rmfb1 + Cmfb2 Cl Rfb Ri Rload Rmfb Rmfb2 Rmfb3 + Cmfb2 Cl Rfb Ri Rload Rmfb Rmfb1 Rmfb3 + Cmfb2 Cl Rfb Ri Rload Rmfb Rmfb1 Rmfb2 + Cmfb2 Cl Rfb Ri Rl Rload Rmfb2 Rmfb3 + Cmfb2 Cl Rfb Ri Rl Rload Rmfb1 Rmfb3 + Cmfb2 Cl Rfb Ri Rl Rload Rmfb1 Rmfb2 + Cl Lf Ri Rload Rmfb Rmfb1 + Cl Lf Ri Rl Rload Rmfb1 - Cl Lf Rg Ri Rload Rmfb3 + Cl Lf Rfb Ri Rmfb Rmfb1 + Cl Lf Rfb Ri Rload Rmfb1 + Cl Lf Rfb Ri Rl Rmfb1 + Cmfb2 Cmfb1 Rfb Ri Rload Rmfb1 Rmfb2 Rmfb3 + Cmfb2 Lf Ri Rload Rmfb2 Rmfb3 + Cmfb2 Lf Ri Rload Rmfb1 Rmfb3 + Cmfb2 Lf Ri Rload Rmfb1 Rmfb2 + Cmfb2 Lf Rfb Ri Rmfb2 Rmfb3 + Cmfb2 Lf Rfb Ri Rmfb1 Rmfb3 + Cmfb2 Lf Rfb Ri Rmfb1 Rmfb2 ) s^2
++ (  Cl Cf Lf Rfb Ri Rload Rmfb Rmfb1 + Cl Cf Lf Rfb Ri Rl Rload Rmfb1 + Cmfb2 Cf Lf Rfb Ri Rload Rmfb2 Rmfb3 + Cmfb2 Cf Lf Rfb Ri Rload Rmfb1 Rmfb3 + Cmfb2 Cf Lf Rfb Ri Rload Rmfb1 Rmfb2 + Cmfb2 Cmfb1 Cl Rfb Ri Rload Rmfb Rmfb1 Rmfb2 Rmfb3 + Cmfb2 Cmfb1 Cl Rfb Ri Rl Rload Rmfb1 Rmfb2 Rmfb3 + Cmfb2 Cl Lf Ri Rload Rmfb Rmfb2 Rmfb3 + Cmfb2 Cl Lf Ri Rload Rmfb Rmfb1 Rmfb3 + Cmfb2 Cl Lf Ri Rload Rmfb Rmfb1 Rmfb2 + Cmfb2 Cl Lf Ri Rl Rload Rmfb2 Rmfb3 + Cmfb2 Cl Lf Ri Rl Rload Rmfb1 Rmfb3 + Cmfb2 Cl Lf Ri Rl Rload Rmfb1 Rmfb2 + Cmfb2 Cl Lf Rfb Ri Rmfb Rmfb2 Rmfb3 + Cmfb2 Cl Lf Rfb Ri Rmfb Rmfb1 Rmfb3 + Cmfb2 Cl Lf Rfb Ri Rmfb Rmfb1 Rmfb2 + Cmfb2 Cl Lf Rfb Ri Rload Rmfb2 Rmfb3 + Cmfb2 Cl Lf Rfb Ri Rload Rmfb1 Rmfb3 + Cmfb2 Cl Lf Rfb Ri Rload Rmfb1 Rmfb2 + Cmfb2 Cl Lf Rfb Ri Rl Rmfb2 Rmfb3 + Cmfb2 Cl Lf Rfb Ri Rl Rmfb1 Rmfb3 + Cmfb2 Cl Lf Rfb Ri Rl Rmfb1 Rmfb2 + Cmfb2 Cmfb1 Lf Ri Rload Rmfb1 Rmfb2 Rmfb3 + Cmfb2 Cmfb1 Lf Rfb Ri Rmfb1 Rmfb2 Rmfb3 ) s^3
++ (  Cmfb2 Cl Cf Lf Rfb Ri Rload Rmfb Rmfb2 Rmfb3 + Cmfb2 Cl Cf Lf Rfb Ri Rload Rmfb Rmfb1 Rmfb3 + Cmfb2 Cl Cf Lf Rfb Ri Rload Rmfb Rmfb1 Rmfb2 + Cmfb2 Cl Cf Lf Rfb Ri Rl Rload Rmfb2 Rmfb3 + Cmfb2 Cl Cf Lf Rfb Ri Rl Rload Rmfb1 Rmfb3 + Cmfb2 Cl Cf Lf Rfb Ri Rl Rload Rmfb1 Rmfb2 + Cmfb2 Cmfb1 Cf Lf Rfb Ri Rload Rmfb1 Rmfb2 Rmfb3 + Cmfb2 Cmfb1 Cl Lf Ri Rload Rmfb Rmfb1 Rmfb2 Rmfb3 + Cmfb2 Cmfb1 Cl Lf Ri Rl Rload Rmfb1 Rmfb2 Rmfb3 + Cmfb2 Cmfb1 Cl Lf Rfb Ri Rmfb Rmfb1 Rmfb2 Rmfb3 + Cmfb2 Cmfb1 Cl Lf Rfb Ri Rload Rmfb1 Rmfb2 Rmfb3 + Cmfb2 Cmfb1 Cl Lf Rfb Ri Rl Rmfb1 Rmfb2 Rmfb3 ) s^4
++ (  Cmfb2 Cmfb1 Cl Cf Lf Rfb Ri Rload Rmfb Rmfb1 Rmfb2 Rmfb3 + Cmfb2 Cmfb1 Cl Cf Lf Rfb Ri Rl Rload Rmfb1 Rmfb2 Rmfb3 ) s^5
 

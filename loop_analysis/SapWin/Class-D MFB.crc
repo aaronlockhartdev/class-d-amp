@@ -1,0 +1,24 @@
+C:\Users\Aaron\Documents\GitHub\class-d-amp\loop_analysis\SapWin\Class-D MFB.sch
+Rload 8 0 4 0
+Cf 8 0 1e-06 0
+Cmfb1 2 0 2.2e-08 0
+Rmfb2 1 2 1500 0
+Cmfb2 6 1 3.3e-12 0
+O1 6 0 1 0
+Rmfb1 2 5 270 0
+Rfb 5 8 8200 0
+V1 3 0 1 1
+Rmfb3 6 2 27000 0
+Lf 8 3 1e-05 0
+Rl 12 9 1000 0
+Cl2 9 10 1e-12 0
+Cl1 10 7 1e-10 0
+O4 9 0 10 0
+Rin 0 5 1800 0
+Rmfb 12 6 680 0
+O3 11 0 12 0
+.OUT 11
+Rl1 7 8 33 0
+Rl2 9 10 4700 0
+Rg 11 12 1000 0
+.END
