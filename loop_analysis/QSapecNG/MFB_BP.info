@@ -1,0 +1,6085 @@
+circuit
+{
+    unknows
+    {
+        unknow
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name node
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 17
+                }
+                prop
+                {
+                    name x
+                    value 180
+                }
+                prop
+                {
+                    name y
+                    value 570
+                }
+            }
+        }
+        unknow
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name node
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 17
+                }
+                prop
+                {
+                    name x
+                    value 230
+                }
+                prop
+                {
+                    name y
+                    value 570
+                }
+            }
+        }
+        unknow
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name node
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 17
+                }
+                prop
+                {
+                    name x
+                    value 120
+                }
+                prop
+                {
+                    name y
+                    value 510
+                }
+            }
+        }
+        unknow
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name node
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 17
+                }
+                prop
+                {
+                    name x
+                    value 460
+                }
+                prop
+                {
+                    name y
+                    value 530
+                }
+            }
+        }
+        unknow
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name node
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 17
+                }
+                prop
+                {
+                    name x
+                    value 690
+                }
+                prop
+                {
+                    name y
+                    value 570
+                }
+            }
+        }
+    }
+    components
+    {
+        component
+        {
+            id R
+            name R1
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 1
+                node 0
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 9
+                }
+                prop
+                {
+                    name x
+                    value 140
+                }
+                prop
+                {
+                    name x_label
+                    value 8.68056
+                }
+                prop
+                {
+                    name y
+                    value 510
+                }
+                prop
+                {
+                    name y_label
+                    value -28.9352
+                }
+            }
+        }
+        component
+        {
+            id R
+            name R2
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 8
+                node 1
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 9
+                }
+                prop
+                {
+                    name x
+                    value 190
+                }
+                prop
+                {
+                    name x_label
+                    value 10.9954
+                }
+                prop
+                {
+                    name y
+                    value 510
+                }
+                prop
+                {
+                    name y_label
+                    value -29.5139
+                }
+            }
+        }
+        component
+        {
+            id R
+            name R3
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 1
+                node 2
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 9
+                }
+                prop
+                {
+                    name x
+                    value 180
+                }
+                prop
+                {
+                    name x_label
+                    value 8.68056
+                }
+                prop
+                {
+                    name y
+                    value 430
+                }
+                prop
+                {
+                    name y_label
+                    value -0.578704
+                }
+            }
+        }
+        component
+        {
+            id C
+            name C1
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 0
+                node 1
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 2
+                }
+                prop
+                {
+                    name x
+                    value 180
+                }
+                prop
+                {
+                    name x_label
+                    value 8.68056
+                }
+                prop
+                {
+                    name y
+                    value 520
+                }
+                prop
+                {
+                    name y_label
+                    value -0.578704
+                }
+            }
+        }
+        component
+        {
+            id C
+            name C2
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 0
+                node 8
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 2
+                }
+                prop
+                {
+                    name x
+                    value 230
+                }
+                prop
+                {
+                    name x_label
+                    value 9.83796
+                }
+                prop
+                {
+                    name y
+                    value 520
+                }
+                prop
+                {
+                    name y_label
+                    value 1.15741
+                }
+            }
+        }
+        component
+        {
+            id R
+            name R4
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 3
+                node 8
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 9
+                }
+                prop
+                {
+                    name x
+                    value 240
+                }
+                prop
+                {
+                    name x_label
+                    value 9.25926
+                }
+                prop
+                {
+                    name y
+                    value 510
+                }
+                prop
+                {
+                    name y_label
+                    value -27.7778
+                }
+            }
+        }
+        component
+        {
+            id R
+            name R5
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 3
+                node 2
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 9
+                }
+                prop
+                {
+                    name x
+                    value 280
+                }
+                prop
+                {
+                    name x_label
+                    value 8.68056
+                }
+                prop
+                {
+                    name y
+                    value 430
+                }
+                prop
+                {
+                    name y_label
+                    value -0.578704
+                }
+            }
+        }
+        component
+        {
+            id R
+            name R6
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 5
+                node 4
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 9
+                }
+                prop
+                {
+                    name x
+                    value 430
+                }
+                prop
+                {
+                    name x_label
+                    value 9.25926
+                }
+                prop
+                {
+                    name y
+                    value 510
+                }
+                prop
+                {
+                    name y_label
+                    value -28.9352
+                }
+            }
+        }
+        component
+        {
+            id A
+            name A1
+            value 1
+            symbolic 0
+            nodes
+            {
+                node 0
+                node 6
+                node 5
+                node 0
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 8
+                }
+                prop
+                {
+                    name x
+                    value 480
+                }
+                prop
+                {
+                    name x_label
+                    value 24.3056
+                }
+                prop
+                {
+                    name y
+                    value 510
+                }
+                prop
+                {
+                    name y_label
+                    value 20.2546
+                }
+            }
+        }
+        component
+        {
+            id C
+            name C3
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 6
+                node 5
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 2
+                }
+                prop
+                {
+                    name x
+                    value 480
+                }
+                prop
+                {
+                    name x_label
+                    value 8.10185
+                }
+                prop
+                {
+                    name y
+                    value 490
+                }
+                prop
+                {
+                    name y_label
+                    value -25.463
+                }
+            }
+        }
+        component
+        {
+            id R
+            name R6
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 6
+                node 5
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 9
+                }
+                prop
+                {
+                    name x
+                    value 480
+                }
+                prop
+                {
+                    name x_label
+                    value 9.25926
+                }
+                prop
+                {
+                    name y
+                    value 450
+                }
+                prop
+                {
+                    name y_label
+                    value -24.3056
+                }
+            }
+        }
+        component
+        {
+            id R
+            name R7
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 7
+                node 10
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 9
+                }
+                prop
+                {
+                    name x
+                    value 530
+                }
+                prop
+                {
+                    name x_label
+                    value 8.10185
+                }
+                prop
+                {
+                    name y
+                    value 510
+                }
+                prop
+                {
+                    name y_label
+                    value -27.7778
+                }
+            }
+        }
+        component
+        {
+            id R
+            name R8
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 7
+                node 8
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 9
+                }
+                prop
+                {
+                    name x
+                    value 630
+                }
+                prop
+                {
+                    name x_label
+                    value 9.25926
+                }
+                prop
+                {
+                    name y
+                    value 430
+                }
+                prop
+                {
+                    name y_label
+                    value 0
+                }
+            }
+        }
+        component
+        {
+            id V
+            name V1
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 0
+                node 11
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 12
+                }
+                prop
+                {
+                    name x
+                    value 690
+                }
+                prop
+                {
+                    name x_label
+                    value -30.0926
+                }
+                prop
+                {
+                    name y
+                    value 520
+                }
+                prop
+                {
+                    name y_label
+                    value 12.1528
+                }
+            }
+        }
+        component
+        {
+            id L
+            name L1
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 9
+                node 11
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 7
+                }
+                prop
+                {
+                    name x
+                    value 700
+                }
+                prop
+                {
+                    name x_label
+                    value 9.25926
+                }
+                prop
+                {
+                    name y
+                    value 510
+                }
+                prop
+                {
+                    name y_label
+                    value -30.0926
+                }
+            }
+        }
+        component
+        {
+            id C
+            name C4
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 0
+                node 9
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 2
+                }
+                prop
+                {
+                    name x
+                    value 740
+                }
+                prop
+                {
+                    name x_label
+                    value 9.25926
+                }
+                prop
+                {
+                    name y
+                    value 520
+                }
+                prop
+                {
+                    name y_label
+                    value 2.31481
+                }
+            }
+        }
+        component
+        {
+            id R
+            name R9
+            value 1
+            symbolic 1
+            nodes
+            {
+                node 0
+                node 9
+            }
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 9
+                }
+                prop
+                {
+                    name x
+                    value 790
+                }
+                prop
+                {
+                    name x_label
+                    value 8.68056
+                }
+                prop
+                {
+                    name y
+                    value 520
+                }
+                prop
+                {
+                    name y_label
+                    value 1.73611
+                }
+            }
+        }
+        component
+        {
+            id R
+            name ""
+            value 0
+            symbolic 0
+            nodes
+            {
+                node 2
+                node 12
+            }
+            props
+            {
+                prop
+                {
+                    name discard
+                    value 1
+                }
+            }
+        }
+        component
+        {
+            id R
+            name ""
+            value 0
+            symbolic 0
+            nodes
+            {
+                node 3
+                node 14
+            }
+            props
+            {
+                prop
+                {
+                    name discard
+                    value 1
+                }
+            }
+        }
+        component
+        {
+            id R
+            name ""
+            value 0
+            symbolic 0
+            nodes
+            {
+                node 3
+                node 12
+            }
+            props
+            {
+                prop
+                {
+                    name discard
+                    value 1
+                }
+            }
+        }
+        component
+        {
+            id R
+            name ""
+            value 0
+            symbolic 0
+            nodes
+            {
+                node 4
+                node 14
+            }
+            props
+            {
+                prop
+                {
+                    name discard
+                    value 1
+                }
+            }
+        }
+        component
+        {
+            id R
+            name ""
+            value 0
+            symbolic 0
+            nodes
+            {
+                node 2
+                node 12
+            }
+            props
+            {
+                prop
+                {
+                    name discard
+                    value 1
+                }
+            }
+        }
+        component
+        {
+            id R
+            name ""
+            value 0
+            symbolic 0
+            nodes
+            {
+                node 7
+                node 14
+            }
+            props
+            {
+                prop
+                {
+                    name discard
+                    value 1
+                }
+            }
+        }
+    }
+    userdefs
+    {
+        userdef
+        {
+            name X1
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 1
+                }
+                prop
+                {
+                    name x
+                    value 340
+                }
+                prop
+                {
+                    name x_label
+                    value 13.3102
+                }
+                prop
+                {
+                    name y
+                    value 430
+                }
+                prop
+                {
+                    name y_label
+                    value 0
+                }
+            }
+            def
+            {
+                unknows
+                {
+                    unknow
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name node
+                                value 12
+                            }
+                            prop
+                            {
+                                name type
+                                value 18
+                            }
+                            prop
+                            {
+                                name x
+                                value 270
+                            }
+                            prop
+                            {
+                                name y
+                                value 510
+                            }
+                        }
+                    }
+                    unknow
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name node
+                                value 14
+                            }
+                            prop
+                            {
+                                name type
+                                value 18
+                            }
+                            prop
+                            {
+                                name x
+                                value 510
+                            }
+                            prop
+                            {
+                                name y
+                                value 510
+                            }
+                        }
+                    }
+                    unknow
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name node
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 17
+                            }
+                            prop
+                            {
+                                name x
+                                value 390
+                            }
+                            prop
+                            {
+                                name y
+                                value 570
+                            }
+                        }
+                    }
+                }
+                components
+                {
+                    component
+                    {
+                        id C
+                        name C1
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 15
+                            node 12
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 2
+                            }
+                            prop
+                            {
+                                name x
+                                value 300
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 9.24318
+                            }
+                            prop
+                            {
+                                name y
+                                value 510
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -28.5333
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id C
+                        name C2
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 13
+                            node 15
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 2
+                            }
+                            prop
+                            {
+                                name x
+                                value 350
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 8.43943
+                            }
+                            prop
+                            {
+                                name y
+                                value 510
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -26.122
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id C
+                        name C3
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 16
+                            node 13
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 2
+                            }
+                            prop
+                            {
+                                name x
+                                value 400
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 7.63567
+                            }
+                            prop
+                            {
+                                name y
+                                value 510
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -28.1314
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id C
+                        name C4
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 14
+                            node 16
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 2
+                            }
+                            prop
+                            {
+                                name x
+                                value 450
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 8.03755
+                            }
+                            prop
+                            {
+                                name y
+                                value 510
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -27.3277
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R1
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 0
+                            node 15
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 1
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 340
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 10.0469
+                            }
+                            prop
+                            {
+                                name y
+                                value 520
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -0.401878
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R2
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 0
+                            node 13
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 1
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 390
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 9.24318
+                            }
+                            prop
+                            {
+                                name y
+                                value 520
+                            }
+                            prop
+                            {
+                                name y_label
+                                value 0.401878
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R3
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 0
+                            node 16
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 1
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 440
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 9.24318
+                            }
+                            prop
+                            {
+                                name y
+                                value 520
+                            }
+                            prop
+                            {
+                                name y_label
+                                value 0
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R4
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 13
+                            node 12
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 330
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 7.63567
+                            }
+                            prop
+                            {
+                                name y
+                                value 460
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -25.3183
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R5
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 14
+                            node 13
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 420
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 7.63567
+                            }
+                            prop
+                            {
+                                name y
+                                value 460
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -27.3277
+                            }
+                        }
+                    }
+                }
+                wires
+                {
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 50
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 350
+                            }
+                            prop
+                            {
+                                name y
+                                value 570
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 50
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 400
+                            }
+                            prop
+                            {
+                                name y
+                                value 570
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 30
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 300
+                            }
+                            prop
+                            {
+                                name y
+                                value 470
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 2
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 0
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 50
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 300
+                            }
+                            prop
+                            {
+                                name y
+                                value 470
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 2
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 0
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 50
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 400
+                            }
+                            prop
+                            {
+                                name y
+                                value 470
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 20
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 380
+                            }
+                            prop
+                            {
+                                name y
+                                value 470
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 20
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 400
+                            }
+                            prop
+                            {
+                                name y
+                                value 470
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 30
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 470
+                            }
+                            prop
+                            {
+                                name y
+                                value 470
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 2
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 0
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 50
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 500
+                            }
+                            prop
+                            {
+                                name y
+                                value 470
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 20
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 280
+                            }
+                            prop
+                            {
+                                name y
+                                value 520
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 20
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 500
+                            }
+                            prop
+                            {
+                                name y
+                                value 520
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        userdef
+        {
+            name X2
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 1
+                }
+                prop
+                {
+                    name x
+                    value 370
+                }
+                prop
+                {
+                    name x_label
+                    value 10.4167
+                }
+                prop
+                {
+                    name y
+                    value 500
+                }
+                prop
+                {
+                    name y_label
+                    value -27.7778
+                }
+            }
+            def
+            {
+                unknows
+                {
+                    unknow
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name node
+                                value 12
+                            }
+                            prop
+                            {
+                                name type
+                                value 18
+                            }
+                            prop
+                            {
+                                name x
+                                value 150
+                            }
+                            prop
+                            {
+                                name y
+                                value 580
+                            }
+                        }
+                    }
+                    unknow
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name node
+                                value 14
+                            }
+                            prop
+                            {
+                                name type
+                                value 18
+                            }
+                            prop
+                            {
+                                name x
+                                value 340
+                            }
+                            prop
+                            {
+                                name y
+                                value 590
+                            }
+                        }
+                    }
+                    unknow
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name node
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 17
+                            }
+                            prop
+                            {
+                                name x
+                                value 220
+                            }
+                            prop
+                            {
+                                name y
+                                value 640
+                            }
+                        }
+                    }
+                    unknow
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name node
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 17
+                            }
+                            prop
+                            {
+                                name x
+                                value 270
+                            }
+                            prop
+                            {
+                                name y
+                                value 640
+                            }
+                        }
+                    }
+                }
+                components
+                {
+                    component
+                    {
+                        id R
+                        name R1
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 13
+                            node 12
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 180
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 8.68056
+                            }
+                            prop
+                            {
+                                name y
+                                value 580
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -29.4174
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id C
+                        name C1
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 0
+                            node 13
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 1
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 2
+                            }
+                            prop
+                            {
+                                name x
+                                value 220
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 8.68056
+                            }
+                            prop
+                            {
+                                name y
+                                value 590
+                            }
+                            prop
+                            {
+                                name y_label
+                                value 0
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R2
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 15
+                            node 13
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 230
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 9.16281
+                            }
+                            prop
+                            {
+                                name y
+                                value 580
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -30.3819
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R1
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 14
+                            node 13
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 230
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 9.16281
+                            }
+                            prop
+                            {
+                                name y
+                                value 530
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -28.4529
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id C
+                        name C2
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 15
+                            node 14
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 1
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 2
+                            }
+                            prop
+                            {
+                                name x
+                                value 270
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 10.1273
+                            }
+                            prop
+                            {
+                                name y
+                                value 540
+                            }
+                            prop
+                            {
+                                name y_label
+                                value 0
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id A
+                        name A1
+                        value 1
+                        symbolic 0
+                        nodes
+                        {
+                            node 0
+                            node 14
+                            node 15
+                            node 0
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 8
+                            }
+                            prop
+                            {
+                                name x
+                                value 280
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 21.7014
+                            }
+                            prop
+                            {
+                                name y
+                                value 580
+                            }
+                            prop
+                            {
+                                name y_label
+                                value 22.6659
+                            }
+                        }
+                    }
+                }
+                wires
+                {
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 20
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 160
+                            }
+                            prop
+                            {
+                                name y
+                                value 590
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 2
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 0
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 50
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 230
+                            }
+                            prop
+                            {
+                                name y
+                                value 540
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 2
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 0
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 60
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 330
+                            }
+                            prop
+                            {
+                                name y
+                                value 540
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 50
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 280
+                            }
+                            prop
+                            {
+                                name y
+                                value 540
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 2
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 0
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 30
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 280
+                            }
+                            prop
+                            {
+                                name y
+                                value 610
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 20
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 330
+                            }
+                            prop
+                            {
+                                name y
+                                value 600
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        userdef
+        {
+            name X1
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 1
+                }
+                prop
+                {
+                    name x
+                    value 580
+                }
+                prop
+                {
+                    name x_label
+                    value 13.3102
+                }
+                prop
+                {
+                    name y
+                    value 430
+                }
+                prop
+                {
+                    name y_label
+                    value 0
+                }
+            }
+            def
+            {
+                unknows
+                {
+                    unknow
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name node
+                                value 12
+                            }
+                            prop
+                            {
+                                name type
+                                value 18
+                            }
+                            prop
+                            {
+                                name x
+                                value 350
+                            }
+                            prop
+                            {
+                                name y
+                                value 210
+                            }
+                        }
+                    }
+                    unknow
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name node
+                                value 14
+                            }
+                            prop
+                            {
+                                name type
+                                value 18
+                            }
+                            prop
+                            {
+                                name x
+                                value 590
+                            }
+                            prop
+                            {
+                                name y
+                                value 210
+                            }
+                        }
+                    }
+                    unknow
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name node
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 17
+                            }
+                            prop
+                            {
+                                name x
+                                value 470
+                            }
+                            prop
+                            {
+                                name y
+                                value 270
+                            }
+                        }
+                    }
+                }
+                components
+                {
+                    component
+                    {
+                        id C
+                        name C1
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 15
+                            node 12
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 2
+                            }
+                            prop
+                            {
+                                name x
+                                value 380
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 9.24318
+                            }
+                            prop
+                            {
+                                name y
+                                value 210
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -28.5333
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id C
+                        name C2
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 13
+                            node 15
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 2
+                            }
+                            prop
+                            {
+                                name x
+                                value 430
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 8.43943
+                            }
+                            prop
+                            {
+                                name y
+                                value 210
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -26.122
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id C
+                        name C3
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 16
+                            node 13
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 2
+                            }
+                            prop
+                            {
+                                name x
+                                value 480
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 7.63567
+                            }
+                            prop
+                            {
+                                name y
+                                value 210
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -28.1314
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id C
+                        name C4
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 14
+                            node 16
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 2
+                            }
+                            prop
+                            {
+                                name x
+                                value 530
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 8.03755
+                            }
+                            prop
+                            {
+                                name y
+                                value 210
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -27.3277
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R1
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 0
+                            node 15
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 1
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 420
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 10.0469
+                            }
+                            prop
+                            {
+                                name y
+                                value 220
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -0.401878
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R2
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 0
+                            node 13
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 1
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 470
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 9.24318
+                            }
+                            prop
+                            {
+                                name y
+                                value 220
+                            }
+                            prop
+                            {
+                                name y_label
+                                value 0.401878
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R3
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 0
+                            node 16
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 1
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 520
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 9.24318
+                            }
+                            prop
+                            {
+                                name y
+                                value 220
+                            }
+                            prop
+                            {
+                                name y_label
+                                value 0
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R4
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 13
+                            node 12
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 410
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 7.63567
+                            }
+                            prop
+                            {
+                                name y
+                                value 160
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -25.3183
+                            }
+                        }
+                    }
+                    component
+                    {
+                        id R
+                        name R5
+                        value 1
+                        symbolic 1
+                        nodes
+                        {
+                            node 14
+                            node 13
+                        }
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 9
+                            }
+                            prop
+                            {
+                                name x
+                                value 500
+                            }
+                            prop
+                            {
+                                name x_label
+                                value 7.63567
+                            }
+                            prop
+                            {
+                                name y
+                                value 160
+                            }
+                            prop
+                            {
+                                name y_label
+                                value -27.3277
+                            }
+                        }
+                    }
+                }
+                wires
+                {
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 50
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 430
+                            }
+                            prop
+                            {
+                                name y
+                                value 270
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 50
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 480
+                            }
+                            prop
+                            {
+                                name y
+                                value 270
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 30
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 380
+                            }
+                            prop
+                            {
+                                name y
+                                value 170
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 2
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 0
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 50
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 380
+                            }
+                            prop
+                            {
+                                name y
+                                value 170
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 2
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 0
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 50
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 480
+                            }
+                            prop
+                            {
+                                name y
+                                value 170
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 20
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 460
+                            }
+                            prop
+                            {
+                                name y
+                                value 170
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 20
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 480
+                            }
+                            prop
+                            {
+                                name y
+                                value 170
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 30
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 550
+                            }
+                            prop
+                            {
+                                name y
+                                value 170
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 2
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 0
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 50
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 580
+                            }
+                            prop
+                            {
+                                name y
+                                value 170
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 20
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 360
+                            }
+                            prop
+                            {
+                                name y
+                                value 220
+                            }
+                        }
+                    }
+                    wire
+                    {
+                        props
+                        {
+                            prop
+                            {
+                                name angle
+                                value 0
+                            }
+                            prop
+                            {
+                                name conn
+                                value 0
+                            }
+                            prop
+                            {
+                                name mirrored
+                                value 0
+                            }
+                            prop
+                            {
+                                name orientation
+                                value 1
+                            }
+                            prop
+                            {
+                                name to_x
+                                value 20
+                            }
+                            prop
+                            {
+                                name to_y
+                                value 0
+                            }
+                            prop
+                            {
+                                name type
+                                value 20
+                            }
+                            prop
+                            {
+                                name x
+                                value 580
+                            }
+                            prop
+                            {
+                                name y
+                                value 220
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    wires
+    {
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 40
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 190
+                }
+                prop
+                {
+                    name y
+                    value 480
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 40
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 190
+                }
+                prop
+                {
+                    name y
+                    value 390
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 40
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 290
+                }
+                prop
+                {
+                    name y
+                    value 390
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 40
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 290
+                }
+                prop
+                {
+                    name y
+                    value 480
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 10
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 340
+                }
+                prop
+                {
+                    name y
+                    value 490
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 10
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 340
+                }
+                prop
+                {
+                    name y
+                    value 430
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 30
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 340
+                }
+                prop
+                {
+                    name y
+                    value 490
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 100
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 190
+                }
+                prop
+                {
+                    name y
+                    value 390
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 50
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 290
+                }
+                prop
+                {
+                    name y
+                    value 390
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 40
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 340
+                }
+                prop
+                {
+                    name y
+                    value 390
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 50
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 290
+                }
+                prop
+                {
+                    name y
+                    value 520
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 10
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 290
+                }
+                prop
+                {
+                    name y
+                    value 510
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 10
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 370
+                }
+                prop
+                {
+                    name y
+                    value 510
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 30
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 340
+                }
+                prop
+                {
+                    name y
+                    value 520
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 10
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 430
+                }
+                prop
+                {
+                    name y
+                    value 510
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 40
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 480
+                }
+                prop
+                {
+                    name y
+                    value 460
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 20
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 480
+                }
+                prop
+                {
+                    name y
+                    value 500
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 40
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 530
+                }
+                prop
+                {
+                    name y
+                    value 460
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 30
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 530
+                }
+                prop
+                {
+                    name y
+                    value 500
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 10
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 580
+                }
+                prop
+                {
+                    name y
+                    value 430
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 30
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 580
+                }
+                prop
+                {
+                    name y
+                    value 490
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 40
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 580
+                }
+                prop
+                {
+                    name y
+                    value 390
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 10
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 580
+                }
+                prop
+                {
+                    name y
+                    value 490
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 240
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 340
+                }
+                prop
+                {
+                    name y
+                    value 390
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 110
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 240
+                }
+                prop
+                {
+                    name y
+                    value 410
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 400
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 240
+                }
+                prop
+                {
+                    name y
+                    value 410
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 1
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 20
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 640
+                }
+                prop
+                {
+                    name y
+                    value 410
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 40
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 640
+                }
+                prop
+                {
+                    name y
+                    value 480
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 60
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 580
+                }
+                prop
+                {
+                    name y
+                    value 520
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 50
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 750
+                }
+                prop
+                {
+                    name y
+                    value 520
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 2
+                }
+                prop
+                {
+                    name to_x
+                    value 0
+                }
+                prop
+                {
+                    name to_y
+                    value 130
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 800
+                }
+                prop
+                {
+                    name y
+                    value 390
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 230
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 570
+                }
+                prop
+                {
+                    name y
+                    value 390
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 50
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 700
+                }
+                prop
+                {
+                    name y
+                    value 570
+                }
+            }
+        }
+        wire
+        {
+            props
+            {
+                prop
+                {
+                    name angle
+                    value 0
+                }
+                prop
+                {
+                    name conn
+                    value 0
+                }
+                prop
+                {
+                    name mirrored
+                    value 0
+                }
+                prop
+                {
+                    name orientation
+                    value 1
+                }
+                prop
+                {
+                    name to_x
+                    value 50
+                }
+                prop
+                {
+                    name to_y
+                    value 0
+                }
+                prop
+                {
+                    name type
+                    value 20
+                }
+                prop
+                {
+                    name x
+                    value 750
+                }
+                prop
+                {
+                    name y
+                    value 570
+                }
+            }
+        }
+    }
+    out
+    {
+        node 0
+        props
+        {
+            prop
+            {
+                name angle
+                value 0
+            }
+            prop
+            {
+                name mirrored
+                value 0
+            }
+            prop
+            {
+                name type
+                value 19
+            }
+            prop
+            {
+                name x
+                value 640
+            }
+            prop
+            {
+                name y
+                value 510
+            }
+        }
+    }
+}
