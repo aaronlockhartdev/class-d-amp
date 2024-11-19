@@ -4,8 +4,8 @@ sys.setrecursionlimit(100_000)
 from typing import List
 
 from calc_resp import precompute_consts, calc_resp
+from problem import TFOptimization
 
-from pymoo.core.problem import Problem
 from sympy import symbols, lambdify, Matrix
 from sympy.parsing.sympy_parser import parse_expr, T
 from functools import partial
@@ -18,55 +18,9 @@ import tqdm
 import re
 import os
 
-class SapwinOptimization(Problem):
-    def __init__(
-            self, 
-            filename, 
-            voltage=None, 
-            num_fs=1_000,
-            num_hs=20,
-            num_ns=100,
-            fr_range=(1., 1e7),
-            prop_lims=(1e-9, 1e-7),
-            **kwargs
-        ):
-        self._load_sapwin(filename, voltage)
-        self._eval_consts = precompute_consts(num_fs, num_hs, num_ns, fr_range)
-
-        def create_bound(var):
-            match var[0]:
-                case 'R':
-                    return (1e-3, 1e6)
-                case 'C':
-                    return (1e-12, 1e-4)
-                case 'L':
-                    return (1e-7, 1e-3)
-                case _:
-                    raise ValueError(f'Please specify `bounds` for component type {var[0]}')
-
-        xl, xu = zip(*(list(map(create_bound, self._vars)) + [prop_lims]))
-        
-        super().__init__(
-            n_var=len(self._vars) + 1,
-            n_obj=4,
-            xl=xl,
-            xu=xu,
-            vtype=float,
-            **kwargs
-        )
-
-    def _evaluate(self, x, out):
-        component_vals = x[:,:-1]
-        delays = x[:,-1]
-
-        return calc_resp(
-            self._calc_num(component_vals), 
-            self._calc_den(component_vals), 
-            delays,
-            *self._eval_consts
-        )
-
-    def _load_sapwin(self, filename, voltage=None):
+class Sapwin(TFOptimization):
+    @classmethod
+    def _load(cls, filename='', voltage=None):
         num_exprs = list()
         den_exprs = list()
 
@@ -133,9 +87,9 @@ class SapwinOptimization(Problem):
                 exprs.append(expr)
                 ord_count += 1
             
-            self._vars = list(vars)
+            vars = list(vars)
 
-            syms = {x: symbols(x) for x in self._vars}
+            syms = {x: symbols(x) for x in vars}
             def convert_to_func(exprs: List[str]):
                 sym_exprs = [
                     parse_expr(e, local_dict=syms, transformations=T[:5], evaluate=False) 
@@ -152,11 +106,7 @@ class SapwinOptimization(Problem):
 
                 return lambda x: np.stack(lmbda(*x.T))
 
-            print("Converting numerator...")
-            self._calc_num = convert_to_func(num_exprs)
-            print("Converting denominator...")
-            self._calc_den = convert_to_func(den_exprs)
-            print("Done!")
+            return vars, convert_to_func(num_exprs), convert_to_func(den_exprs)
 
             
 
@@ -170,7 +120,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    problem = SapwinOptimization(args.filename, args.voltage)
+    problem = Sapwin(filename=args.filename, voltage=args.voltage)
 
     import time
 

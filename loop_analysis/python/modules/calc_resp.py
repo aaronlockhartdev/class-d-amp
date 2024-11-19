@@ -5,21 +5,21 @@ import numpy.polynomial.polynomial as npp
 
 
 @njit(nogil=True)
-def precompute_consts(num_fs, num_hs, num_ns, fr_range):
+def precompute_consts(n_fs, n_hs, n_ns, fr_range):
     fs = 2j * np.pi * np.logspace(
         np.log10(fr_range[0]), 
         np.log10(fr_range[1]), 
-        num=num_fs
+        num=n_fs
     )
-    hs = np.linspace(1e-1, 0.5, num=num_hs)
-    ns = np.arange(1, num_ns+1, dtype=np.complex128)
+    hs = np.linspace(1e-1, 0.5, num=n_hs)
+    ns = np.arange(1, n_ns+1, dtype=np.complex128)
 
     fxn = fs[:,None] * ns[None,:]
 
     tmp1 = np.exp(2j * np.pi * hs[:,None] * ns[None,:])
     tmp2 = 1 - (1 / tmp1)
     fr_tmp = tmp2 * (1-tmp1) / (2 * ns)
-    dcgain_tmp = -tmp2 / (2j * ns) * (2 / np.pi)
+    dcgain_tmp = -tmp2 / (2j * ns) * (4 / np.pi)
 
     return fs, hs, ns, fxn, fr_tmp, dcgain_tmp
 
@@ -30,17 +30,16 @@ def calc_resp(
         fxn, fr_tmp, dcin_tmp
     ):
 
-    num_samples = delays.size
+    n_samples = delays.size
 
-    mag = np.empty((num_samples, hs.size, fs.size))
-    ph = np.empty((num_samples, hs.size, fs.size))
-    osc_frs = np.full((num_samples, hs.size), np.inf)
-    dcins = np.empty((num_samples, hs.size))
-    dcgains = np.empty((num_samples, hs.size))
+    mag = np.empty((n_samples, hs.size, fs.size))
+    ph = np.empty((n_samples, hs.size, fs.size))
+    osc_frs = np.full((n_samples, hs.size), np.inf)
+    dcins = np.empty((n_samples, hs.size))
+    dcgains = np.empty((n_samples, hs.size))
 
-    for i in prange(num_samples):
+    for i in prange(n_samples):
         fr_tf = npp.polyval(fxn, -num_coefs[:,i]) / npp.polyval(fxn, den_coefs[:,i]) * np.exp(-delays[i] * fxn)
-
 
         fresp = np.zeros((hs.size, fs.size), dtype=np.complex128)
         for j in range(hs.size):
@@ -80,7 +79,7 @@ def calc_resp(
 
         dcins[i] = -np.sum(np.real(tmp * dcin_tmp), axis=-1)# * num_coefs[0,i] / den_coefs[0,i]
 
-        diff_h = hs[1] - hs[0]
+        diff_h = 2 * (hs[1] - hs[0])
         
         for j in range(1, hs.size - 1):
             dcgains[i,j] = (2 * diff_h) / (dcins[i,j-1] - dcins[i,j+1])
