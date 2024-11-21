@@ -3,3 +3,5 @@ numba
 lcapy
 control
 matplotlib
+gmpy2
+symengine
