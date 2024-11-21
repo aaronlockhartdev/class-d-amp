@@ -1,25 +1,16 @@
-<<<<<<< Updated upstream
 Vs 1 0 s 1; down
-=======
-Vs 1 0 s; down
->>>>>>> Stashed changes
 Lf 1 2_1 10e-6; right=1.5
 Cf 2_1 0 4.7e-6; down
 W? 2_1 2_2; right
 Rl 2_2 0 4; down
-<<<<<<< Updated upstream
 Ebuf 2_3 0 2_2 0 1; down
 O? 2_2 2_3; right
 Rfb 2_3 3_1 680; right=1.5
 Rin 3_1 0 1.8e3; down
-=======
-Rfb 2_2 3_1 1.8e3; right=1.5
-Rin 3_1 0 680; down
->>>>>>> Stashed changes
 W? 3_1 3_2; right
-Cf1 3_2 0 10e-9; down
-Rf 3_2 4_1 470; right=1.5
-Cf2 4_1 0 10e-9; down
+Cf1 3_2 0; down
+Rf 3_2 4_1; right
+Cf2 4_1 0; down
 W? 4_1 4_2; right
 R? 4_2 5_1; right
 W? 2_3 2_4; up
@@ -80,10 +71,5 @@ R? 17_2 0_7 Rl4; right
 R? 18 0_8 Rl5; right
 W? 4_2 4_3; down
 W? 4_3 4_4; right
-<<<<<<< Updated upstream
 Rff 4_4 14_1; up
 ;draw_nodes=connections, autoground=true
-=======
-Rff 4_4 out; up
-;draw_nodes=connections, autoground=true, label_ids=false
->>>>>>> Stashed changes

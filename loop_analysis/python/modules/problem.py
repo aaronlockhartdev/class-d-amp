@@ -1,4 +1,4 @@
-from modules.calc_resp import precompute_consts, calc_resp
+from calc_resp import precompute_consts, calc_resp
 
 from pymoo.core.problem import Problem
 

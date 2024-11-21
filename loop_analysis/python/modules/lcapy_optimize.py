@@ -1,4 +1,4 @@
-from modules.problem import LoopOptimization
+from problem import LoopOptimization
 from sympy import lambdify
 from numba import njit, prange
 
@@ -12,7 +12,7 @@ class Lcapy(LoopOptimization):
     def _load(cls, filename='', inn='', out=''):
         ckt = lcapy.Circuit(filename)
         ckt.simplify()
-        ckt.draw()
+        print(ckt)
         tf = ckt.transfer(inn, 0, out, 0)
 
         syms = list(tf.sympy.free_symbols - {lcapy.s})
