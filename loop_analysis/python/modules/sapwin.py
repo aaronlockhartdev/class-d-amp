@@ -1,22 +1,15 @@
-import sys
-sys.setrecursionlimit(1_000_000)
-sys.set_int_max_str_digits(10_000)
-
 from typing import List
 
 from modules.calc_resp import precompute_consts, calc_resp
 from modules.problem import LoopOptimization
 
-from sympy import symbols, lambdify, Matrix
-from sympy.parsing.sympy_parser import parse_expr, T
 from functools import partial
-
-from numba import njit
+from numba import njit, prange
 
 import numpy as np
+import symengine as se
 
 import re
-import os
 
 class Sapwin(LoopOptimization):
     @classmethod
@@ -91,30 +84,33 @@ class Sapwin(LoopOptimization):
                 ord_count += 1
             
             vars = list(vars)
+            vars.sort()
+            syms = se.symbols(' '.join(vars))
 
-            syms = {x: symbols(x) for x in vars}
-            def convert_to_func(exprs: List[str]):
-                sym_exprs = [
-                    parse_expr(
-                        e, 
-                        local_dict=syms, 
-                        transformations=T[:5], 
-                        evaluate=False
-                    ) 
-                    for e in exprs
-                ]
+            def to_func(exprs: List[str]):
+                sym_exprs = list(map(se.S, exprs))
 
-                lmbda = njit(nogil=True, fastmath=True, parallel=True)(lambdify(
-                    syms.values(), 
+                print(exprs)
+
+                lmbda = se.Lambdify(
+                    [syms], 
                     sym_exprs, 
-                    modules=np, 
                     cse=True, 
-                    docstring_limit=0
-                ))
+                    backend='llvm'
+                )
 
-                return lambda x: np.stack(lmbda(*x.T))
+                num_coefs = len(exprs)
 
-            return vars, convert_to_func(num_exprs), convert_to_func(den_exprs)
+                #@njit(nogil=True, fastmath=True, parallel=True)
+                def f(vals):
+                    res = np.empty((vals.shape[0], num_coefs))
+                    for i in prange(vals.shape[0]):
+                        res[i] = np.array(lmbda(vals[i]), dtype=float).T
+                    return res
+
+                return f
+
+            return vars, to_func(num_exprs), to_func(den_exprs)
 
             
 

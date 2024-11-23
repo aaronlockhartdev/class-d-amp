@@ -1,32 +1,29 @@
 C:\Users\Aaron\Documents\GitHub\class-d-amp\loop_analysis\sym_analysis\SapWin\class_d_simp.sch
 V1 1 0 1 1
-Lfilt 6 1 1 0
-Cfilt 6 0 1 0
-R1 6 0 4 1
-Rfb 2 6 1800 1
+Lfilt 10 1 1 0
+Cfilt 10 0 1 0
+R1 10 0 4 1
+Rfb 2 10 1800 1
 Rin 2 0 680 1
 Cif 2 0 1 0
-R1_X1  _2 2 1 0
-R2_X1  _3 _2 1 0
-C1_X1  0 _2 1 0
-C2_X1  _3 3 1 0
-R1_X1  _2 3 1 0
-O1_X1  3 0 _3 0  
-
-R4 4 3 1 0
-O1 5 0 4 0
-C3 5 4 1 0
-R5 8 5 1 0
-R1_X2  _4 6 1 0
-C1_X2  _5 6 1 0
-C2_X2  _4 _5 1 0
-C3_X2  7 _6 1 0
-C4_X2  _6 _4 1 0
-R2_X2  7 _4 1 0
-R3_X2  0 _5 1 0
-R4_X2  0 _4 1 0
-R5_X2  0 _6 1 0
-
-R6 7 8 1 0
-.OUT 8
+R4 4 2 1 0
+C3 4 0 1 0
+R5 3 4 1 0
+O1 5 0 3 0
+C4 5 3 1 0
+R6 5 4 1 0
+R7 6 5 1 0
+O2 7 0 6 0
+R8 7 6 1 0
+C5 7 6 1 0
+R9 11 7 1 0
+R10 11 13 1 0
+C6 9 13 1 0
+C7 8 9 1 0
+C8 10 8 1 0
+R11 0 8 1 0
+R12 0 9 1 0
+R13 12 10 1 0
+.OUT 11
+C9 12 13 1 0
 .END

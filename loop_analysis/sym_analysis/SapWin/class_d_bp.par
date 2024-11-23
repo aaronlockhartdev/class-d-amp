@@ -7,3 +7,7 @@ GrNum=14;
 NtNum=1289241;
 GrDen=16
 NtDen=19284237
+Frefin=10000000
+Freqin=1
+EndTime=1
+Hz=1

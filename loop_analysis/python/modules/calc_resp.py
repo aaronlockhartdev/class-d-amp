@@ -4,7 +4,6 @@ import numpy as np
 import numpy.polynomial.polynomial as npp
 
 
-@njit(nogil=True)
 def precompute_consts(n_fs, n_hs, n_ns, fr_range):
     fs = 2j * np.pi * np.logspace(
         np.log10(fr_range[0]), 
