@@ -1,6 +1,8 @@
-from calc_resp import precompute_consts, calc_resp
+from modules.calc_resp import precompute_consts, calc_resp
 
 from pymoo.core.problem import Problem
+
+import numpy as np
 
 class LoopOptimization(Problem):
     def __init__(
@@ -30,7 +32,7 @@ class LoopOptimization(Problem):
 
         super().__init__(
             n_var=len(self._vars) + 1,
-            n_obj=4,
+            n_obj=2,
             xl=xl,
             xu=xu,
             vtype=float
@@ -40,12 +42,20 @@ class LoopOptimization(Problem):
         vals = x[:,:-1]
         delays = x[:,-1]
 
-        return calc_resp(
+        mag, ph, osc_frs, dcins, dcgains = calc_resp(
             self._calc_num(vals),
             self._calc_den(vals),
             delays,
             *self._eval_consts
         )
+
+        fs, hs, ns = self._eval_consts[:3]
+
+        obj_lst = list()
+        obj_lst.append(np.nan_to_num(np.abs(osc_frs[:,-1] - 2 * np.pi * 500e3)))
+        obj_lst.append(np.nan_to_num(1 / np.min((mag[:,-1] * dcgains[:,-1,None])[:,np.imag(fs) < 2 * np.pi * 20e3], axis=-1)))
+
+        out['F'] = np.stack(obj_lst)
 
     @classmethod
     def _load(cls, **kwargs):

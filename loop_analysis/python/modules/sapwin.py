@@ -1,10 +1,11 @@
 import sys
-sys.setrecursionlimit(100_000)
+sys.setrecursionlimit(1_000_000)
+sys.set_int_max_str_digits(10_000)
 
 from typing import List
 
-from calc_resp import precompute_consts, calc_resp
-from problem import TFOptimization
+from modules.calc_resp import precompute_consts, calc_resp
+from modules.problem import LoopOptimization
 
 from sympy import symbols, lambdify, Matrix
 from sympy.parsing.sympy_parser import parse_expr, T
@@ -14,11 +15,10 @@ from numba import njit
 
 import numpy as np
 
-import tqdm
 import re
 import os
 
-class Sapwin(TFOptimization):
+class Sapwin(LoopOptimization):
     @classmethod
     def _load(cls, filename='', voltage=None):
         num_exprs = list()
@@ -53,16 +53,16 @@ class Sapwin(TFOptimization):
                     exprs = den_exprs
                     continue
                 
-                parens = re.search('\(.*\)', l)
+                parens = re.search(r'\(.*\)', l)
                 coef = parens.group()[1:-1]
-                terms = re.findall('\S+', coef)
+                terms = re.findall(r'\+|\-|\S+', coef)
 
-                new_vars = set(re.findall('(?<!\w)[a-zA-Z]\w+', coef))
+                new_vars = set(re.findall(r'(?<!\w)[a-zA-Z]\w+', coef))
                 vars.update(new_vars)
                 
                 tail = l[parens.span()[-1]:]
-                if lap := re.search('s(\^\d+)?', tail):
-                    tmp = re.search('\d+', lap.group())
+                if lap := re.search(r's(\^\d+)?', tail):
+                    tmp = re.search(r'\d+', lap.group())
                     ordr = int(tmp.group()) if tmp else 1
                 else: ordr = 0
 
@@ -71,7 +71,10 @@ class Sapwin(TFOptimization):
                 mult = False
                 for t in terms:
                     
-                    if t in vars or t not in {'-', '+'}:
+                    if t not in {'-', '+'}:
+                        if t.isdigit():
+                            # Convert integers to float
+                            t += '.'
                         if mult:
                             expr += "*"
                         mult = True
@@ -92,8 +95,13 @@ class Sapwin(TFOptimization):
             syms = {x: symbols(x) for x in vars}
             def convert_to_func(exprs: List[str]):
                 sym_exprs = [
-                    parse_expr(e, local_dict=syms, transformations=T[:5], evaluate=False) 
-                    for e in tqdm.tqdm(exprs)
+                    parse_expr(
+                        e, 
+                        local_dict=syms, 
+                        transformations=T[:5], 
+                        evaluate=False
+                    ) 
+                    for e in exprs
                 ]
 
                 lmbda = njit(nogil=True, fastmath=True, parallel=True)(lambdify(

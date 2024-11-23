@@ -2,5 +2,6 @@ pymoo
 numba
 control
 matplotlib
+sympy
 gmpy2
 symengine

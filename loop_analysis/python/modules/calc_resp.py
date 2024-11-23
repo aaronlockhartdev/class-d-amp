@@ -75,7 +75,7 @@ def calc_resp(
 
                 iters += 1
             else:
-                osc_frs[i,j] = np.real(mid / 1j)
+                osc_frs[i,j] = np.imag(mid)
 
         dcins[i] = -np.sum(np.real(tmp * dcin_tmp), axis=-1)# * num_coefs[0,i] / den_coefs[0,i]
 
