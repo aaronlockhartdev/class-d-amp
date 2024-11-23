@@ -1,0 +1,13 @@
+[SAPEC]
+Out=v1;
+NumOut=1
+Comp=C1_X1;C1_X2;C2_X1;C2_X2;C3;C3_X2;C4_X2;Cfilt;Cif;Lfilt;R1_X1;R1_X2;R2_X1;R2_X2;R3_X2;R4;R4_X2;R5;R5_X2;R6;$;$;$;$;$;
+Val=1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;-1;4;1800;680;1;
+GrNum=8;
+NtNum=392;
+GrDen=10
+NtDen=12764
+Frefin=10000000
+Freqin=1
+EndTime=1
+Hz=1
