@@ -38,7 +38,7 @@ def calc_resp(
     dcgains = np.empty((n_samples, hs.size))
 
     for i in prange(n_samples):
-        fr_tf = npp.polyval(fxn, -num_coefs[:,i]) / npp.polyval(fxn, den_coefs[:,i]) * np.exp(-delays[i] * fxn)
+        fr_tf = npp.polyval(fxn, -num_coefs[i]) / npp.polyval(fxn, den_coefs[i]) * np.exp(-delays[i] * fxn)
 
         fresp = np.zeros((hs.size, fs.size), dtype=np.complex128)
         for j in range(hs.size):
@@ -66,7 +66,7 @@ def calc_resp(
                     break
                 mid = (start + end) / 2
                 xn = ns * mid
-                tmp[j] = npp.polyval(xn, -num_coefs[:,i]) / npp.polyval(xn, den_coefs[:,i]) * np.exp(-delays[i] * xn)
+                tmp[j] = npp.polyval(xn, -num_coefs[i]) / npp.polyval(xn, den_coefs[i]) * np.exp(-delays[i] * xn)
                 err = np.angle(np.sum(tmp[j] * fr_tmp[j,:]))
 
                 if np.signbit(err): end = mid

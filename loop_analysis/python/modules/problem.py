@@ -32,7 +32,7 @@ class LoopOptimization(Problem):
 
         super().__init__(
             n_var=len(self._vars) + 1,
-            n_obj=2,
+            n_obj=3,
             xl=xl,
             xu=xu,
             vtype=float
@@ -48,16 +48,18 @@ class LoopOptimization(Problem):
             delays,
             *self._eval_consts
         )
-
+        
         fs, hs, ns = self._eval_consts[:3]
 
         obj_lst = list()
-        obj_lst.append(abs(osc_frs[:,-1] / (2 * np.pi) - 500e3))
+        obj_lst.append(np.nan_to_num(abs(osc_frs[:,-1] / (2 * np.pi) - 500e3)))
         obj_lst.append(np.nan_to_num(1.01 ** -np.min((mag[:,-1] * dcgains[:,-1,None])[:,np.imag(fs) < 2 * np.pi * 20e3], axis=-1)))
+        p_band_ks = dcgains[:,hs > 0.25]
+        pb_max = np.max(p_band_ks, axis=-1)
+        pb_min = np.min(p_band_ks, axis=-1)
+        obj_lst.append(np.nan_to_num((pb_max - pb_min) / pb_max))
 
-        print(osc_frs.shape)
-        print(osc_frs[:,-1] / (2 * np.pi))
-
+        
         out['F'] = obj_lst
 
     @classmethod

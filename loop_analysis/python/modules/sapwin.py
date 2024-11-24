@@ -90,8 +90,6 @@ class Sapwin(LoopOptimization):
             def to_func(exprs: List[str]):
                 sym_exprs = list(map(se.S, exprs))
 
-                print(exprs)
-
                 lmbda = se.Lambdify(
                     [syms], 
                     sym_exprs, 
@@ -99,13 +97,14 @@ class Sapwin(LoopOptimization):
                     backend='llvm'
                 )
 
-                num_coefs = len(exprs)
+                n_coefs = len(exprs)
 
                 #@njit(nogil=True, fastmath=True, parallel=True)
                 def f(vals):
-                    res = np.empty((vals.shape[0], num_coefs))
-                    for i in prange(vals.shape[0]):
-                        res[i] = np.array(lmbda(vals[i]), dtype=float).T
+                    n_samples = vals.shape[0]
+                    res = np.empty((n_samples, n_coefs))
+                    for i in prange(n_samples):
+                        res[i] = lmbda(vals[i])
                     return res
 
                 return f

@@ -2,6 +2,7 @@ pymoo
 numba
 control
 matplotlib
+ipympl
 sympy
 gmpy2
 symengine
