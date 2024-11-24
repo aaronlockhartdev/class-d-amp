@@ -52,8 +52,11 @@ class LoopOptimization(Problem):
         fs, hs, ns = self._eval_consts[:3]
 
         obj_lst = list()
-        obj_lst.append(np.nan_to_num(np.fabs(osc_frs[:,-1] - (2 * np.pi * 500e3))))
-        obj_lst.append(np.nan_to_num(1 / np.min((mag[:,-1] * dcgains[:,-1,None])[:,np.imag(fs) < 2 * np.pi * 20e3], axis=-1)))
+        obj_lst.append(abs(osc_frs[:,-1] / (2 * np.pi) - 500e3))
+        obj_lst.append(np.nan_to_num(1.01 ** -np.min((mag[:,-1] * dcgains[:,-1,None])[:,np.imag(fs) < 2 * np.pi * 20e3], axis=-1)))
+
+        print(osc_frs.shape)
+        print(osc_frs[:,-1] / (2 * np.pi))
 
         out['F'] = obj_lst
 
