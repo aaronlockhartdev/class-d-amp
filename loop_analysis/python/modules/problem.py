@@ -32,7 +32,7 @@ class LoopOptimization(Problem):
 
         super().__init__(
             n_var=len(self._vars) + 1,
-            n_obj=3,
+            n_obj=1,
             xl=xl,
             xu=xu,
             vtype=float
@@ -51,16 +51,19 @@ class LoopOptimization(Problem):
         
         fs, hs, ns = self._eval_consts[:3]
 
-        obj_lst = list()
-        obj_lst.append(np.nan_to_num(abs(osc_frs[:,-1] / (2 * np.pi) - 500e3)))
-        obj_lst.append(np.nan_to_num(1.01 ** -np.min((mag[:,-1] * dcgains[:,-1,None])[:,np.imag(fs) < 2 * np.pi * 20e3], axis=-1)))
-        p_band_ks = dcgains[:,hs > 0.25]
-        pb_max = np.max(p_band_ks, axis=-1)
-        pb_min = np.min(p_band_ks, axis=-1)
-        obj_lst.append(np.nan_to_num((pb_max - pb_min) / pb_max))
+        osc_f_err = abs(osc_frs[:,-1] - 3.14e6) / 1e8
+        p_band = hs > 0.25
+        f_band = np.imag(fs) < 1.57e5
+        min_gain = 1 / np.min((mag[:,*np.ix_(p_band, f_band)] * dcgains[:,p_band,None]), axis=(1,2))
 
-        
-        out['F'] = obj_lst
+        mask = np.isfinite(osc_frs[:,-1])
+        mask &= min_gain > 0
+
+        err = np.full((x.shape[0],), np.finfo(float).max)
+
+        err[mask] = (min_gain + osc_f_err)[mask]
+
+        out['F'] = err
 
     @classmethod
     def _load(cls, **kwargs):

@@ -22,7 +22,7 @@ def precompute_consts(n_fs, n_hs, n_ns, fr_range):
 
     return fs, hs, ns, fxn, fr_tmp, dcgain_tmp
 
-@njit(nogil=True, fastmath=True, parallel=True)
+@njit(nogil=True, fastmath=True, parallel=True, cache=True)
 def calc_resp(
         num_coefs, den_coefs, delays, 
         fs, hs, ns, 
