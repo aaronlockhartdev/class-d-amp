@@ -20,7 +20,7 @@ class LoopOptimization(Problem):
         def create_bound(var):
             match var[0]:
                 case 'R':
-                    return (1e-3, 1e6)
+                    return (1e2, 1e5)
                 case 'C':
                     return (1e-12, 1e-4)
                 case 'L':
@@ -42,7 +42,7 @@ class LoopOptimization(Problem):
         vals = x[:,:-1]
         delays = x[:,-1]
 
-        mag, ph, osc_frs, dcins, dcgains = calc_resp(
+        mag, ph, osc_frs, dcins, dcgains, margins = calc_resp(
             self._calc_num(vals),
             self._calc_den(vals),
             delays,
@@ -51,17 +51,19 @@ class LoopOptimization(Problem):
         
         fs, hs, ns = self._eval_consts[:3]
 
-        osc_f_err = abs(osc_frs[:,-1] - 3.14e6) / 1e8
         p_band = hs > 0.25
         f_band = np.imag(fs) < 1.57e5
-        min_gain = 1 / np.min((mag[:,*np.ix_(p_band, f_band)] * dcgains[:,p_band,None]), axis=(1,2))
 
-        mask = np.isfinite(osc_frs[:,-1])
+
+        osc_f_err = abs(osc_frs[:,-1] - 3.14e6)
+        min_gain = 1 / np.min((mag[:,None,f_band] * dcgains[:,p_band,None]), axis=(1,2))
+        margin = 1 - 1 / (1 + 1e4 ** (0.2 - np.min((margins[:,p_band]), axis=1)))
+
+        mask = np.all(np.isfinite(osc_frs[:,p_band]), axis=1)
         mask &= min_gain > 0
 
         err = np.full((x.shape[0],), np.finfo(float).max)
-
-        err[mask] = (min_gain + osc_f_err)[mask]
+        err[mask] = (min_gain + 1e-8 * osc_f_err + 1e-5 * margin)[mask]
 
         out['F'] = err
 

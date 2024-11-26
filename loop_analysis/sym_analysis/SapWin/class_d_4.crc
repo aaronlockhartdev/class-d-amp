@@ -1,0 +1,23 @@
+C:\Users\Aaron\Documents\GitHub\class-d-amp\loop_analysis\sym_analysis\SapWin\class_d_4.sch
+R1 1 0 1 0
+R2 7 1 1 0
+O1 3 0 1 0
+C1 3 1 1 0
+C2 4 2 1 0
+O2 4 0 2 0
+R3 2 3 1 0
+R4 10 4 1 0
+V1 5 0 1 1
+L1 7 5 1 0
+C4 7 0 1 0
+R7 7 0 4 1
+.OUT 10
+R10 6 11 1 0
+C7 6 7 1 0
+R9 0 8 1 0
+C6 8 7 1 0
+R8 0 9 1 0
+C5 8 9 1 0
+C3 9 11 1 0
+R6 10 11 1 0
+.END
