@@ -63,7 +63,7 @@ class LoopOptimization(Problem):
         mask &= min_gain > 0
 
         err = np.full((x.shape[0],), np.finfo(float).max)
-        err[mask] = (min_gain + 1e-8 * osc_f_err + 1e-5 * margin)[mask]
+        err[mask] = (min_gain + 1e-8 * osc_f_err + 5e-4 * margin)[mask]
 
         out['F'] = err
 
