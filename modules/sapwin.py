@@ -63,7 +63,6 @@ class Sapwin(LoopOptimization):
 
                 mult = False
                 for t in terms:
-                    
                     if t not in {'-', '+'}:
                         if t.isdigit():
                             # Convert integers to float
@@ -80,6 +79,7 @@ class Sapwin(LoopOptimization):
                     exprs.append('0')
                     ord_count += 1
 
+                #print(f'({expr})s^{ordr}')
                 exprs.append(expr)
                 ord_count += 1
             

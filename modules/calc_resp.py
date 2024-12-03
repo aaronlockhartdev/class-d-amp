@@ -31,11 +31,12 @@ def calc_resp(
 
     n_samples = delays.size
 
-    mag = np.empty((n_samples, hs.size, fs.size))
+    mag = np.empty((n_samples, fs.size))
     ph = np.empty((n_samples, hs.size, fs.size))
     osc_frs = np.full((n_samples, hs.size), np.inf)
     dcins = np.empty((n_samples, hs.size))
     dcgains = np.empty((n_samples, hs.size))
+    margins = np.zeros((n_samples, hs.size))
 
     for i in prange(n_samples):
         fr_tf = npp.polyval(fxn, -num_coefs[i]) / npp.polyval(fxn, den_coefs[i]) * np.exp(-delays[i] * fxn)
@@ -46,17 +47,21 @@ def calc_resp(
                 for l in range(ns.size):
                     fresp[j,k] += fr_tf[k,l] * fr_tmp[j,l]
 
-        mag[i] = np.absolute(fresp)
+        mag[i] = np.absolute(fr_tf[:,0])
         ph[i] = np.unwrap(np.angle(fresp), -1)
 
+        # Find zero-crossings in phase
         gs = np.signbit(ph[i,...])
         zcs = ~gs[:,:-1] & gs[:,1:]
         inds = fs.size - np.argmax(zcs[:,::-1], axis=-1) - 1
 
+        # Binary search for exact oscillation frequency
         tmp = np.empty((hs.size, ns.size), dtype=np.complex128)
         for j in range(hs.size):
-            if inds[j] == fs.size - 1:
+            if inds[j] == fs.size - 1 or inds[j] == 0:
                 continue
+
+            # Binary search for exact oscillation frequency
             start = fs[inds[j]-1]
             end = fs[inds[j]]
             iters = 0
@@ -76,7 +81,16 @@ def calc_resp(
             else:
                 osc_frs[i,j] = np.imag(mid)
 
-        dcins[i] = -np.sum(np.real(tmp * dcin_tmp), axis=-1)# * num_coefs[0,i] / den_coefs[0,i]
+            # Find phase margin before oscillation
+            k = inds[j] - 1
+            while not np.signbit(ph[i,j,k]):
+                if k == 0:
+                    break
+                if ph[i,j,k] > margins[i,j]:
+                    margins[i,j] = ph[i,j,k]
+                k -= 1
+
+        dcins[i] = -np.sum(np.real(tmp * dcin_tmp), axis=-1)
 
         diff_h = 2 * (hs[1] - hs[0])
         
@@ -86,5 +100,5 @@ def calc_resp(
         dcgains[i,0] = diff_h / (dcins[i,0] - dcins[i,1])
         dcgains[i,-1] = diff_h / (dcins[i,-2] - dcins[i,-1])
 
-    return mag, ph, osc_frs, dcins, dcgains
+    return mag, ph, osc_frs, dcins, dcgains, margins
 

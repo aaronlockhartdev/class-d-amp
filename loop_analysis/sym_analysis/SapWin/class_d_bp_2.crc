@@ -1,0 +1,31 @@
+C:\Users\Aaron\Documents\GitHub\class-d-amp\loop_analysis\sym_analysis\SapWin\class_d_bp_2.sch
+R4 6 4 1 0
+Rin 4 0 1800 1
+Rfb 4 7 8200 1
+Cif 4 0 2.2e-09 0
+Cl1 5 1 3.3e-10 0
+Rl2 1 6 1000 0
+E1 2 0 6 0 -1 1
+R7 11 2 1000 0
+O1 12 0 11 0
+R11 8 12 1000 0
+.OUT 8
+R1 7 0 4 1
+Cf 7 0 1 0
+Lf 7 3 1 0
+V1 3 0 1 1
+R10 8 4 1 0
+Cl2 7 5 1 0
+Rl1 5 0 1 0
+R6 7 6 1 0
+Rl1 9 0 1 0
+Cl2 7 9 1 0
+Rl2 10 8 1000 0
+Cl1 9 10 3.3e-10 0
+R13 14 11 1 0
+C7 13 11 1 0
+C8 14 13 1 0
+C9 12 14 1 0
+R14 0 13 1 0
+R15 0 14 1 0
+.END
