@@ -3,21 +3,19 @@ name = "socd"
 version = "0.1.0"
 description = "Library for simulating self-oscillating Class-D amplifiers"
 readme = "README.md"
-requires-python = ">=3.12,<3.13"
+requires-python = ">=3.13,<3.14"
 dependencies = [
-    "control>=0.10.1",
-    "e2scapy",
-    "matplotlib>=3.10.3",
+    "gmpy2>=2.2.1",
     "numba>=0.60",
-    "pymoo>=0.6.1.3",
+    "setuptools>=80.9.0",
     "symengine>=0.14.1",
     "sympy>=1.14.0",
 ]
 [project.optional-dependencies]
 cuda = [
-    "nvmath-python[cu12,dx]>=0.3.0; sys_platform != 'darwin'",
-    "numba-cuda>=0.11.0"
+    "cupy-cuda12x[all]>=13.4.1",
+    "numba-cuda>=0.11.0",
 ]
-
-[tool.uv.sources]
-e2scapy = { git = "https://gitlab.aaronlockhart.dev/aaronlockhartdev/e2-scapy" }
+[build-system]
+requires = ["uv_build>=0.7.12,<0.8.0"]
+build-backend = "uv_build"

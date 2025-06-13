@@ -6,15 +6,15 @@ classifiers = ["Private :: Do Not Upload"]
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "class-d-amp",
     "marimo[recommended]>=0.13.10",
+    "socd[cuda]",
 ]
-
-[tool.uv.sources]
-socd = { workspace = true }
 
 [tool.uv.workspace]
 members = ["packages/*"]
+
+[tool.uv.sources]
+socd = { workspace = true }
 
 [tool.marimo.experimental]
 lsp = true

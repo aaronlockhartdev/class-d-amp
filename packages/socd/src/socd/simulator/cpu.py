@@ -27,13 +27,15 @@ def _get_consts(n_fs, n_hs, n_ns, fr_range):
 
     tmp1 = np.exp(2j * np.pi * hs[:, None] * ns[None, :])
     tmp2 = 1 - (1 / tmp1)
-    fr_coef = tmp2 * (1 - tmp1) / (2 * ns)
+    fr_coef = tmp2 * (1 - tmp1) / (2j * ns)
     dc_coef = -tmp2 / (2j * ns) * (4 / np.pi)
 
     return (fs, hs, ns, h_step, fxn, fr_coef, dc_coef)
 
 @njit(nogil=True, fastmath=True, parallel=True, cache=True)
-def _batch_resp(coefs: tuple[np.ndarray], delays: np.ndarray, consts: tuple[np.ndarray]):
+def _batch_resp(
+    coefs: tuple[np.ndarray], delays: np.ndarray, consts: tuple[np.ndarray, ...]
+):
     fs, hs, ns, h_step, fxn, fr_coef, dc_coef = consts
     n_samples = delays.size
     num_coefs, den_coefs = coefs
@@ -85,7 +87,7 @@ def _batch_resp(coefs: tuple[np.ndarray], delays: np.ndarray, consts: tuple[np.n
                 tmp[j] = (
                     npp.polyval(xn, -num_coefs[i])
                     / npp.polyval(xn, den_coefs[i])
-                    * np.exp(-delays[i] * xn)
+                    * np.exp(-delays[i] * xn) # TODO! is this needed?
                 )
                 err = np.angle(np.sum(tmp[j] * fr_coef[j, :]))
 
