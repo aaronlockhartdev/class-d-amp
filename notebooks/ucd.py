@@ -13,7 +13,7 @@ def _():
 
 @app.cell
 def _(socd):
-    simulator = socd.CUDASimulator(devices=(0,1))
+    simulator = socd.CUDASimulator(devices=(0,1), n_fs=5_000, n_ns=100, n_hs=10, batch_size=100, threads_per_device=1, osc_margin=1e-5)
     return (simulator,)
 
 
@@ -29,15 +29,20 @@ def _(socd):
 @app.cell
 def _():
     import numpy as np
-    rng = np.random.default_rng()
-    x_arr = rng.random((1_024,))
-    y_arr = rng.random((1_024,))
+    rng = np.random.default_rng(seed=0)
+    x_arr = rng.random((10_000,))
+    y_arr = rng.random((10_000,))
     return x_arr, y_arr
 
 
 @app.cell
 def _(loop, simulator, x, x_arr, y, y_arr):
-    simulator.simulate(loop, {x: x_arr, y: y_arr})
+    import os
+    os.environ["CUPY_ACCELERATORS"] = "cub,cutensor"
+
+    import cupyx.profiler
+    with cupyx.profiler.profile():
+        simulator.simulate(loop, {x: x_arr, y: y_arr})
     return
 
 
