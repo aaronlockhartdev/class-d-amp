@@ -49,16 +49,18 @@ class CUDAWorkThread:
     osc_margin: float
 
     def __post_init__(self):
-        self.device = cp.cuda.Device(self.device)
-        with self.device:
-            self.stream = cp.cuda.Stream(non_blocking=True)
+        self._device = cp.cuda.Device(self.device)
+        with self._device:
+            self._stream = cp.cuda.Stream(non_blocking=True)
+
+        self._cuda_graphs = dict()
 
     def __call__(self, evaluate=False):       
         if _use_marimo:
             thread  = mo.current_thread()
 
-        self.device.use()
-        self.stream.use()
+        self._device.use()
+        self._stream.use()
 
         dcins = cp.empty((self.batch_size, self.cache.n_hs), dtype=cp.float32)
         osc_freqs = cp.empty((self.batch_size, self.cache.n_hs), dtype=cp.float32)
@@ -93,25 +95,47 @@ class CUDAWorkThread:
                 nums_masked = cp.expand_dims(nums[:, active_idxs[0]], (-2, -1))
                 dens_masked = cp.expand_dims(dens[:, active_idxs[0]], (-2, -1))
 
+                graph_params = (
+                    active_idxs.shape[1],
+                    nums.shape[0],
+                    dens.shape[1],
+                )
+
+                if graph_params in self._cuda_graphs:
+                    self._cuda_graphs[graph_params].launch()
+                    self._stream.synchronize()
+                    continue
+
+                self._stream.begin_capture(mode=2)
+
+
                 tfs = cp.exp(-delays_masked * harmonics) * (
                     cpp.polyval(harmonics, nums_masked, tensor=False) /
                     cpp.polyval(harmonics, dens_masked, tensor=False)
                 )
 
-                if iter == 0:
-                    mags = cp.abs(tfs)
+                #if iter == 0:
+                #    mags = cp.abs(tfs)
 
-                frs = cp.einsum("afn,an->af", tfs, self.cache.fr_coefs[active_idxs[1]])
+                frs = cp.sum(
+                    cp.multiply(
+                        tfs, cp.expand_dims(self.cache.fr_coefs[active_idxs[1]], 1)
+                    ),
+                    axis=-1,
+                )
                 phs = cp.unwrap(cp.angle(frs))
 
                 signs = cp.signbit(phs)
                 zcs = ~signs[:, :-1] & signs[:, 1:]
+
                 inds = self.cache.n_fs - cp.argmax(cp.flip(zcs, axis=-1), axis=-1) - 1
 
                 active_mask = cp.abs(phs[arange, inds]) > self.osc_margin
-
                 set_mask = ~active_mask
-                set_idxs = active_idxs[:, set_mask]
+
+                set_idxs = cp.compress(set_mask, active_idxs, axis=-1)
+                active_idxs = cp.compress(active_mask, active_idxs, axis=-1)
+
                 dcins[*set_idxs] = cp.real(
                     cp.einsum(
                         "an,an->a",
@@ -121,18 +145,19 @@ class CUDAWorkThread:
                 )
                 osc_freqs[*set_idxs] = cp.imag(frequencies[arange[set_mask], inds[set_mask]])
 
-                active_idxs = active_idxs[:, active_mask]
-
                 inds = inds[active_mask]
 
                 arange = cp.mgrid[:active_idxs.shape[1]]
                 frequencies = cp.linspace(
                     frequencies[arange, inds - 1],
                     frequencies[arange, inds],
-                    num=self.cache.n_fs // max(1, active_idxs.shape[1]),
+                    num=max(3, self.cache.n_fs // max(1, active_idxs.shape[1])),
                     axis=-1,
                 )
+
                 harmonics = cp.expand_dims(frequencies, -1) * cp.expand_dims(self.cache.ns, (0, 1))
+
+                self._stream.end_capture()
 
             #dcgains = cp.gradient(dcins, axis=-1)
 
