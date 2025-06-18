@@ -13,8 +13,7 @@ dependencies = [
 ]
 [project.optional-dependencies]
 cuda = [
-    "cupy-cuda12x[all]>=13.4.1",
-    "numba-cuda>=0.11.0",
+    "cupy-cuda12x",
 ]
 [build-system]
 requires = ["uv_build>=0.7.12,<0.8.0"]

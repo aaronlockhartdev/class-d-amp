@@ -18,8 +18,6 @@ import numpy.typing as npt
 import cupy as cp
 import cupy.polynomial.polynomial as cpp
 
-from numba import cuda
-
 import sympy
 
 from .cache import Cache
@@ -39,6 +37,17 @@ class CUDACache:
                 )
             self.__setattr__(name, value)
 
+@cp.fuse
+def lin_approx(highs: cp.ndarray, lows: cp.ndarray):
+    return ((lows[1] * highs[0]) - (highs[1] * lows[0])) / (lows[1] - highs[1])
+
+def calc_tfs(nums: cp.ndarray, dens: cp.ndarray, delays: cp.ndarray, harmonics: cp.ndarray):
+    return cp.exp(-delays * harmonics) * (
+        cpp.polyval(harmonics, nums, tensor=False)
+        / cpp.polyval(harmonics, dens, tensor=False)
+    )
+
+
 @dataclasses.dataclass
 class CUDAWorkThread:
     device: int
@@ -49,21 +58,13 @@ class CUDAWorkThread:
     osc_margin: float
 
     def __post_init__(self):
-        self._device = cp.cuda.Device(self.device)
-        with self._device:
-            self._stream = cp.cuda.Stream(non_blocking=True)
-
         self._cuda_graphs = dict()
 
     def __call__(self, evaluate=False):       
         if _use_marimo:
             thread  = mo.current_thread()
 
-        self._device.use()
-        self._stream.use()
-
-        dcins = cp.empty((self.batch_size, self.cache.n_hs), dtype=cp.float32)
-        osc_freqs = cp.empty((self.batch_size, self.cache.n_hs), dtype=cp.float32)
+        cp.cuda.Device(self.device).use()
 
         while _use_marimo and not thread.should_exit:
             try:
@@ -71,95 +72,95 @@ class CUDAWorkThread:
             except queue.Empty:
                 break
 
-            batch_size = params.shape[1]
-
             nums, dens, delays = map(
                 functools.partial(cp.asarray, dtype=cp.float32), loop.ufunc(*params)
             )
 
-            active_idxs = cp.mgrid[:batch_size, :self.cache.n_hs].reshape(2, -1)
-            arange = cp.mgrid[:active_idxs.shape[1]]
+            if (batch_size := params.shape[1]) in self._cuda_graphs:
+                with cp.cuda.Stream.ptds as stream:
+                    self._cuda_graphs[batch_size].launch()
+                    stream.synchronize()
+                continue
 
-            frequencies = cp.expand_dims(self.cache.frequencies, 0)
-            harmonics = cp.expand_dims(self.cache.harmonics, 0)
+            with cp.cuda.Stream(non_blocking=True) as stream:
 
-            i = 0
-            while (
-                active_idxs.size > 0
-                and i < self.max_iter
-                and (_use_marimo and not thread.should_exit)
-            ):
-                i += 1
+                stream.begin_capture()
 
-                delays_masked = cp.expand_dims(delays[active_idxs[0]], (-2, -1))
-                nums_masked = cp.expand_dims(nums[:, active_idxs[0]], (-2, -1))
-                dens_masked = cp.expand_dims(dens[:, active_idxs[0]], (-2, -1))
-
-                graph_params = (
-                    active_idxs.shape[1],
-                    nums.shape[0],
-                    dens.shape[1],
+                nums, dens, delays = map(
+                    functools.partial(cp.expand_dims, axis=(-2, -1)),
+                    (nums, dens, delays)
                 )
 
-                if graph_params in self._cuda_graphs:
-                    self._cuda_graphs[graph_params].launch()
-                    self._stream.synchronize()
-                    continue
+                frequencies = cp.expand_dims(self.cache.frequencies, 0)
+                harmonics = 1j * cp.expand_dims(self.cache.harmonics, 0)
 
-                self._stream.begin_capture(mode=2)
-
-
-                tfs = cp.exp(-delays_masked * harmonics) * (
-                    cpp.polyval(harmonics, nums_masked, tensor=False) /
-                    cpp.polyval(harmonics, dens_masked, tensor=False)
-                )
-
-                #if iter == 0:
-                #    mags = cp.abs(tfs)
-
+                tfs = calc_tfs(nums, dens, delays, harmonics)
                 frs = cp.sum(
                     cp.multiply(
-                        tfs, cp.expand_dims(self.cache.fr_coefs[active_idxs[1]], 1)
+                        cp.expand_dims(tfs, 1),
+                        cp.expand_dims(self.cache.fr_coefs, (0, 2)),
                     ),
                     axis=-1,
                 )
-                phs = cp.unwrap(cp.angle(frs))
+
+                phs = cp.unwrap(cp.angle(frs), axis=-1)
 
                 signs = cp.signbit(phs)
-                zcs = ~signs[:, :-1] & signs[:, 1:]
+                zcs = ~signs[..., :-1] & signs[..., 1:]
+                inds = cp.expand_dims((self.cache.n_fs - 1) - cp.argmax(cp.flip(zcs, axis=-1), axis=-1), -1)
 
-                inds = self.cache.n_fs - cp.argmax(cp.flip(zcs, axis=-1), axis=-1) - 1
+                frequencies = cp.expand_dims(frequencies, axis=1)
 
-                active_mask = cp.abs(phs[arange, inds]) > self.osc_margin
-                set_mask = ~active_mask
+                lows, highs = (
+                    cp.stack(
+                        (
+                            cp.squeeze(
+                                cp.take_along_axis(arr, inds_, axis=-1),
+                                axis=-1,
+                            )
+                            for arr in (frequencies, phs)
+                        )
+                    )
+                    for inds_ in (inds - 1, inds)
+                )
 
-                set_idxs = cp.compress(set_mask, active_idxs, axis=-1)
-                active_idxs = cp.compress(active_mask, active_idxs, axis=-1)
+                for iter_ in range(self.max_iter):
+                    mids = lin_approx(highs, lows)
+                    harmonics = 1j * cp.expand_dims(mids, -1) * cp.expand_dims(self.cache.ns, (0, 1))
 
-                dcins[*set_idxs] = cp.real(
-                    cp.einsum(
-                        "an,an->a",
-                        tfs[arange[set_mask], inds[set_mask], :],
-                        self.cache.dc_coefs[set_idxs[1]],
+                    tfs = calc_tfs(nums, dens, delays, harmonics)
+
+                    if iter_ == self.max_iter - 1:
+                        break
+                
+                    frs = cp.sum(
+                        cp.multiply(
+                            tfs,
+                            cp.expand_dims(self.cache.fr_coefs, 0),
+                        ),
+                        axis=-1,
+                    )
+
+                    mids = cp.stack((mids, cp.angle(frs)))
+
+                    signbits = cp.expand_dims(cp.signbit(mids[1]), 0)
+                    lows = cp.where(signbits, lows, mids)
+                    highs = cp.where(signbits, mids, highs)
+
+
+                osc_freqs = mids
+
+                dcins = cp.real(
+                    cp.sum(
+                        cp.multiply(tfs, cp.expand_dims(self.cache.dc_coefs, 0)), axis=-1
                     )
                 )
-                osc_freqs[*set_idxs] = cp.imag(frequencies[arange[set_mask], inds[set_mask]])
 
-                inds = inds[active_mask]
+                dcgains = cp.gradient(dcins, axis=-1)
 
-                arange = cp.mgrid[:active_idxs.shape[1]]
-                frequencies = cp.linspace(
-                    frequencies[arange, inds - 1],
-                    frequencies[arange, inds],
-                    num=max(3, self.cache.n_fs // max(1, active_idxs.shape[1])),
-                    axis=-1,
-                )
+                self._cuda_graphs[batch_size] = stream.end_capture()
 
-                harmonics = cp.expand_dims(frequencies, -1) * cp.expand_dims(self.cache.ns, (0, 1))
-
-                self._stream.end_capture()
-
-            #dcgains = cp.gradient(dcins, axis=-1)
+            self._cuda_graphs[batch_size].launch()
 
 class CUDASimulator:
     def __init__(
@@ -167,8 +168,7 @@ class CUDASimulator:
         devices: tuple[int] | int = 0,
         threads_per_device: int = 3,
         batch_size: int = 32,
-        max_iter: int = 10,
-        osc_margin: float = 1e-1,
+        iters: int = 10,
         n_fs: int = 1_000,
         n_hs: int = 20,
         n_ns: int = 200,
@@ -178,8 +178,7 @@ class CUDASimulator:
         self.devices = devices if isinstance(devices, tuple) else (devices,)
         self.batch_size = batch_size
         self.threads_per_device = threads_per_device
-        self.max_iter = max_iter
-        self.osc_margin = osc_margin
+        self.iters= iters
 
         self.cache = Cache(n_fs, n_hs, n_ns, min_duty_cycle, fr_range)
         self._cuda_caches = dict()
@@ -225,9 +224,10 @@ class CUDASimulator:
                         self._cuda_caches[device],
                         work_queue,
                         self.batch_size,
-                        self.max_iter,
+                        self.iters,
                         self.osc_margin,
-                    )
+                    ),
+                    daemon=True,
                 )
                 for _ in range(self.threads_per_device)
             )

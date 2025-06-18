@@ -1,0 +1,99 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.13.15"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "88691ab38977b4460e08d80f5db3c1ce",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "8d94febf0d1f3ca06d48d6e7957d2c10",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "7c94b2f5246099407321951a1e2ae0d5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "96899aedb4c5821beda85cc98b207e09",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "af55c6d472be111b2d2ef4ad8c7eb9eb",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "d97132da2918f55640ed2fa43e28f233",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"plot\">Plot</h2>\n<span class=\"paragraph\">Given a transfer function <strong>H</strong>, frequency range <strong>[start, end]</strong>, and propagation delay <strong>delay</strong>, we numerically approximate the transfer function given a square wave amplifier, which theoretically produces an infinite number of harmonics. If there is no propagation delay or it is already approximated in the transfer function, <strong>delay</strong> defaults to the floating point \u03b5 to approximate the limit form mentioned in Putzey's paper.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "c6ad44f0880654e679316ff09b414f8e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h2 id=\"transfer-functions\">Transfer Functions</h2>\n<span class=\"paragraph\">As per Bruno Putzey's 2011 paper titled <a href=\"https://www.hypex.nl/media/3f/62/4a/1682342035/Globally%20modulated%20self-oscillating%20amplifier.pdf\" rel=\"noopener\" target=\"_blank\">\"Global Modulated Self-Oscillating Amplifier with Improved Linearity\"</a>, we treat our Class-D amplifier as a square wave oscillator wrapped with a linear function. For simplicity's sake, we further split said linear function into three serial sections\u2013the <strong>propagation delay</strong>, <strong>low pass filter</strong>, and <strong>feedback network</strong>. The <strong>propagation delay</strong> is calculated during numerical evaluation in order to avoid using a Pad\u00e9 approximation. Please define functions constructing transfer functions based on component values for the <strong>low pass filter</strong> and <strong>feedback network</strong> below.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}

@@ -25,7 +25,7 @@ class Cache:
 
     @functools.cached_property
     def frequencies(self) -> np.ndarray:
-        return 2j * np.pi * np.geomspace(*self.fr_range, num=self.n_fs)
+        return 2 * np.pi * np.geomspace(*self.fr_range, num=self.n_fs)
 
     @functools.cached_property
     def duty_cycles(self) -> np.ndarray:

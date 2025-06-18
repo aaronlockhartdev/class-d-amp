@@ -1,13 +1,7 @@
 import importlib.util
 
-if importlib.util.find_spec("numba_cuda"):
-    import numba.cuda
-
-    if numba.cuda.gpus:
-        from .simulator.cuda import CUDASimulator
-    else:
-        print("CUDA enabled device not found, falling back to CPU")
-        from .cpu import batch_resp
+if importlib.util.find_spec("cupy"):
+    from socd.simulator.cuda import CUDASimulator
 else:
     from .cpu import batch_resp
 
